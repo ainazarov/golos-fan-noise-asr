@@ -1,0 +1,66 @@
+{
+  "source": {
+    "name": "DCASE 2020 Task 2 development data, MIMII fan subset",
+    "page": "https://zenodo.org/records/3678171",
+    "download_url": "https://zenodo.org/records/3678171/files/dev_data_fan.zip?download=1",
+    "archive": "/tf/ai_nazarov/proj1/assets/downloads/dev_data_fan.zip",
+    "archive_bytes": 1354774772,
+    "md5": "649bdfc06263ae7a838963f43b6641e6",
+    "license": "CC BY-NC-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "citation_instructions": "Cite the three papers listed on the source record."
+  },
+  "scope": "Normal industrial fan recordings with existing factory background ambience.",
+  "selection": "Only fan/train/normal_id_*.wav from the original archive; no original test or anomaly recordings.",
+  "split_rule": {
+    "train": [
+      "00",
+      "02"
+    ],
+    "val": [
+      "04"
+    ],
+    "test": [
+      "06"
+    ]
+  },
+  "independence": "Machine-disjoint. Independent source sessions or factory-background recordings are not verifiable from the metadata.",
+  "audio": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "format": "PCM_16"
+  },
+  "counts_by_machine": {
+    "00": 911,
+    "02": 916,
+    "04": 933,
+    "06": 915
+  },
+  "hours_by_machine": {
+    "00": 2.530556,
+    "02": 2.544444,
+    "04": 2.591667,
+    "06": 2.541667
+  },
+  "excluded_members": {
+    "anomalous_recordings": 1475,
+    "normal_recordings_from_source_test": 400
+  },
+  "splits": {
+    "train": {
+      "manifest": "/tf/ai_nazarov/proj1/data/noise_train.jsonl",
+      "recordings": 1827,
+      "hours": 5.075
+    },
+    "val": {
+      "manifest": "/tf/ai_nazarov/proj1/data/noise_val.jsonl",
+      "recordings": 933,
+      "hours": 2.591667
+    },
+    "test": {
+      "manifest": "/tf/ai_nazarov/proj1/data/noise_test.jsonl",
+      "recordings": 915,
+      "hours": 2.541667
+    }
+  }
+}

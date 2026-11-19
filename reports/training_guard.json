@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "returncode": 2,
+  "full_training_started": false,
+  "reason": "baseline without --run-training rejected"
+}

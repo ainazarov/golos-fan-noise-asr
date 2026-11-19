@@ -1,0 +1,24 @@
+{
+  "vocab_size": 112,
+  "unknown_id": 0,
+  "mel_bins": 128,
+  "tokenizer_sha256": "b66240e2d5625065b281f7bc210df6d5cbe68a28b9e0611c5542c3d2167192d5",
+  "tokenizer_training_text": "data/train_text.txt (Golos training split only)",
+  "max_piece_length": 4,
+  "sample": [
+    "▁п",
+    "ри",
+    "в",
+    "ет",
+    "▁м",
+    "и",
+    "р"
+  ],
+  "source_config": "/share/asr/Speech/examples/asr/conf/fastconformer/hybrid_transducer_ctc/fastconformer_hybrid_tdt_ctc_bpe_ru.yaml",
+  "baseline_epochs": 10,
+  "mixed_epochs": 25,
+  "noise_epochs": 5,
+  "validation_every_epochs": 5,
+  "checkpoint_every_epochs": 1,
+  "full_training_started": false
+}

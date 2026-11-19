@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-11-19T12:33:27.294214+00:00",
+  "status": "passed",
+  "unit_tests_passed": 63,
+  "phase_order": [
+    "baseline",
+    "mixed",
+    "noise"
+  ],
+  "epochs": [
+    10,
+    25,
+    5
+  ],
+  "vocab_size": 112,
+  "mel_bins": 128,
+  "validation_every_epochs": 5,
+  "checkpoint_every_epochs": 1,
+  "checkpoint_retention": "all 40 epochs plus the latest checkpoint in each stage",
+  "progress_log_every_steps": 50,
+  "automatic_full_test_evaluation": false,
+  "integration_checks": [
+    "Sequential final checkpoint selection and correct parent-phase identity",
+    "Full optimizer/scheduler same-stage checkpoint resume",
+    "No stale validation metrics on unvalidated saved checkpoints",
+    "Deterministic Sova holdouts and UUID overlap rejection",
+    "Original/noisy mixed validation transcript and identity alignment",
+    "All eligible Sova audio paths exist and normalized Sova has no unknown tokens"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "hypothetical_start_moscow": "2026-11-19T15:35:47.314874+03:00",
+  "actual_training_started": false,
+  "mel_bins": 128,
+  "vocab_size": 112,
+  "phase_order": [
+    "baseline",
+    "mixed",
+    "noise"
+  ],
+  "total_epochs": 40,
+  "operational_allowance_fraction": 0.15,
+  "stages": {
+    "baseline": {
+      "epochs": 10,
+      "train_recordings": 1091741,
+      "train_hours": 1212.876061,
+      "benchmark": "golos",
+      "batch_size": 16,
+      "precision": 32,
+      "steps_per_epoch": 68234,
+      "seconds_per_step": 0.23379571868882826,
+      "epoch_training_hours": 4.431338074725974,
+      "training_only_hours": 44.31338074725974,
+      "planning_hours": 50.9603878593487,
+      "training_only_finish_moscow": "2026-11-21T11:54:35.485564+03:00",
+      "planning_finish_moscow": "2026-11-21T18:33:24.711168+03:00"
+    },
+    "mixed": {
+      "epochs": 25,
+      "train_recordings": 1291888,
+      "train_hours": 1483.58713,
+      "benchmark": "mixed",
+      "batch_size": 16,
+      "precision": 32,
+      "steps_per_epoch": 80743,
+      "seconds_per_step": 0.24178999653551728,
+      "epoch_training_hours": 5.42301380285202,
+      "training_only_hours": 135.5753450713005,
+      "planning_hours": 155.91164683199557,
+      "training_only_finish_moscow": "2026-11-27T03:29:06.727821+03:00",
+      "planning_finish_moscow": "2026-11-28T06:28:06.639763+03:00"
+    },
+    "noise": {
+      "epochs": 5,
+      "train_recordings": 1291888,
+      "train_hours": 1483.58713,
+      "benchmark": "mixed_noise",
+      "batch_size": 16,
+      "precision": 32,
+      "steps_per_epoch": 80743,
+      "seconds_per_step": 0.24309801395309882,
+      "epoch_training_hours": 5.452350816837517,
+      "training_only_hours": 27.261754084187583,
+      "planning_hours": 31.35101719681572,
+      "training_only_finish_moscow": "2026-11-28T06:44:49.042524+03:00",
+      "planning_finish_moscow": "2026-11-29T13:49:10.301671+03:00"
+    }
+  },
+  "total_training_only_hours": 207.15047990274783,
+  "total_planning_hours": 238.22305188816,
+  "training_only_finish_moscow": "2026-11-28T06:44:49.042524+03:00",
+  "planning_finish_moscow": "2026-11-29T13:49:10.301671+03:00",
+  "assumptions": [
+    "Exclusive uninterrupted use of the benchmark V100 with the same model, precision, batch size and loader settings",
+    "Epoch sizes use the final prepared manifests after development/test reservations",
+    "15% planning allowance covers periodic validation, checkpoint writing and throughput variation",
+    "Validation remains every five completed epochs and checkpoints are retained every epoch",
+    "The allowance is not a statistical confidence interval or a guaranteed deadline",
+    "Short benchmarks measure execution speed, not model convergence or final recognition quality",
+    "Comprehensive final test/checkpoint evaluation is excluded",
+    "Preparation is complete before the assumed start; future interruptions and GPU contention are not predicted"
+  ]
+}

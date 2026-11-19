@@ -1,0 +1,298 @@
+{
+  "status": "complete",
+  "seed": 112,
+  "sova_source": {
+    "path": "/share/sova/sova3_man.json",
+    "sha256": "d2bb0dc2292b415176d89144959c5dbdf636a8e341127499e0a3b73c5e4b51d9",
+    "recordings": 203113,
+    "hours": 274.917568,
+    "eligible": {
+      "recordings": 203080,
+      "seconds": 988961.976312,
+      "hours": 274.71166,
+      "empty_transcripts": 0,
+      "conditions": {
+        "sova": {
+          "recordings": 203080,
+          "hours": 274.71166
+        }
+      },
+      "duration_bins": {
+        "10-20s": 4520,
+        "2-5s": 126256,
+        "5-10s": 71989,
+        "<=2s": 315
+      }
+    },
+    "excluded": {
+      "duration_out_of_range": 33,
+      "unique_excluded": 33
+    },
+    "yo_to_e_normalization": {
+      "source_changed_recordings": 47607,
+      "source_replaced_characters": 55802,
+      "eligible_changed_recordings": 47599,
+      "eligible_replaced_characters": 55792
+    },
+    "duplicate_uuid_policy": "reject all duplicate UUIDs, including duplicate metadata rows"
+  },
+  "split_policy": {
+    "identity": "normalized recording UUID; speaker IDs unavailable; not certified speaker-disjoint",
+    "development": "smallest SHA256(seed, sova_development, prefixed UUID) until duration quota",
+    "test": "smallest SHA256(seed, sova_test, prefixed UUID) among remaining records until quota",
+    "development_target_hours": 2.0,
+    "test_target_hours": 2.0,
+    "duration_range_seconds": [
+      0.3,
+      20.0
+    ],
+    "nonempty_text_required": true,
+    "text_normalization": "collapse Unicode whitespace and replace ё with е; preserve other case and punctuation",
+    "source_path_prefix": "/root/dataset/sova",
+    "mapped_audio_root": "/share/sova",
+    "mixture": "one copy of each Golos and Sova training recording; no oversampling",
+    "tokenizer": "existing tokenizer112 and its Golos-only training corpus remain unchanged"
+  },
+  "golos_sources": {
+    "train": {
+      "path": "/tf/ai_nazarov/proj1/data/train.jsonl",
+      "sha256": "a09a1c954e8164142fbbc665c59c4072ed6c13b84437eb86039ee494a3664915",
+      "recordings": 1091741,
+      "seconds": 4366353.821312,
+      "hours": 1212.876061,
+      "empty_transcripts": 0,
+      "conditions": {
+        "golos_crowd": {
+          "recordings": 975569,
+          "hours": 1088.154902
+        },
+        "golos_farfield": {
+          "recordings": 116172,
+          "hours": 124.72116
+        }
+      },
+      "duration_bins": {
+        "10-20s": 12829,
+        "2-5s": 797720,
+        "5-10s": 214070,
+        "<=2s": 67122
+      }
+    },
+    "val_original": {
+      "path": "/tf/ai_nazarov/proj1/data/val_original.jsonl",
+      "sha256": "35defe0e140ff15ff30f3f44a1a78c0ac4df60d0925fd7d4a03aec150a275992",
+      "recordings": 1831,
+      "seconds": 7203.94225,
+      "hours": 2.001095,
+      "empty_transcripts": 0,
+      "conditions": {
+        "golos_crowd": {
+          "recordings": 1654,
+          "hours": 1.800855
+        },
+        "golos_farfield": {
+          "recordings": 177,
+          "hours": 0.20024
+        }
+      },
+      "duration_bins": {
+        "10-20s": 20,
+        "2-5s": 1332,
+        "5-10s": 342,
+        "<=2s": 137
+      }
+    },
+    "test_crowd_original": {
+      "path": "/tf/ai_nazarov/proj1/data/test_crowd_original.jsonl",
+      "sha256": "12ac3473aa8db0f6a453422e1aa80fd495d6fe66e9258d8cd3068e32a556dfac",
+      "recordings": 9994,
+      "seconds": 40321.193875,
+      "hours": 11.200332,
+      "empty_transcripts": 98,
+      "conditions": {
+        "golos_crowd": {
+          "recordings": 9994,
+          "hours": 11.200332
+        }
+      },
+      "duration_bins": {
+        "10-20s": 111,
+        "2-5s": 7227,
+        "5-10s": 2045,
+        "<=2s": 607,
+        ">20s": 4
+      }
+    },
+    "test_farfield_original": {
+      "path": "/tf/ai_nazarov/proj1/data/test_farfield_original.jsonl",
+      "sha256": "9c2e6c58bf8abefda0e417d6c7f7b451482fda2ca610ee57249b3356cafde4f7",
+      "recordings": 1916,
+      "seconds": 5068.741,
+      "hours": 1.407984,
+      "empty_transcripts": 1,
+      "conditions": {
+        "golos_farfield": {
+          "recordings": 1916,
+          "hours": 1.407984
+        }
+      },
+      "duration_bins": {
+        "10-20s": 2,
+        "2-5s": 1147,
+        "5-10s": 93,
+        "<=2s": 674
+      }
+    }
+  },
+  "golos_overlap_recording_counts": {
+    "train": 0,
+    "val_original": 0,
+    "test_crowd_original": 0,
+    "test_farfield_original": 0
+  },
+  "holdout_quotas": {
+    "development": {
+      "target_seconds": 7200.0,
+      "actual_seconds": 7201.861625,
+      "recordings": 1456
+    },
+    "test": {
+      "target_seconds": 7200.0,
+      "actual_seconds": 7200.269063,
+      "recordings": 1477
+    }
+  },
+  "splits": {
+    "train_sova": {
+      "recordings": 200147,
+      "seconds": 974559.845625,
+      "hours": 270.711068,
+      "empty_transcripts": 0,
+      "conditions": {
+        "sova": {
+          "recordings": 200147,
+          "hours": 270.711068
+        }
+      },
+      "duration_bins": {
+        "10-20s": 4448,
+        "2-5s": 124439,
+        "5-10s": 70952,
+        "<=2s": 308
+      }
+    },
+    "val_sova_original": {
+      "recordings": 1456,
+      "seconds": 7201.861625,
+      "hours": 2.000517,
+      "empty_transcripts": 0,
+      "conditions": {
+        "sova": {
+          "recordings": 1456,
+          "hours": 2.000517
+        }
+      },
+      "duration_bins": {
+        "10-20s": 40,
+        "2-5s": 889,
+        "5-10s": 524,
+        "<=2s": 3
+      }
+    },
+    "test_sova_original": {
+      "recordings": 1477,
+      "seconds": 7200.269063,
+      "hours": 2.000075,
+      "empty_transcripts": 0,
+      "conditions": {
+        "sova": {
+          "recordings": 1477,
+          "hours": 2.000075
+        }
+      },
+      "duration_bins": {
+        "10-20s": 32,
+        "2-5s": 928,
+        "5-10s": 513,
+        "<=2s": 4
+      }
+    },
+    "train_mixed": {
+      "recordings": 1291888,
+      "seconds": 5340913.666937,
+      "hours": 1483.58713,
+      "empty_transcripts": 0,
+      "conditions": {
+        "golos_crowd": {
+          "recordings": 975569,
+          "hours": 1088.154902
+        },
+        "golos_farfield": {
+          "recordings": 116172,
+          "hours": 124.72116
+        },
+        "sova": {
+          "recordings": 200147,
+          "hours": 270.711068
+        }
+      },
+      "duration_bins": {
+        "10-20s": 17277,
+        "2-5s": 922159,
+        "5-10s": 285022,
+        "<=2s": 67430
+      }
+    },
+    "val_mixed_original": {
+      "recordings": 3287,
+      "seconds": 14405.803875,
+      "hours": 4.001612,
+      "empty_transcripts": 0,
+      "conditions": {
+        "golos_crowd": {
+          "recordings": 1654,
+          "hours": 1.800855
+        },
+        "golos_farfield": {
+          "recordings": 177,
+          "hours": 0.20024
+        },
+        "sova": {
+          "recordings": 1456,
+          "hours": 2.000517
+        }
+      },
+      "duration_bins": {
+        "10-20s": 60,
+        "2-5s": 2221,
+        "5-10s": 866,
+        "<=2s": 140
+      }
+    }
+  },
+  "audio_path_checks": {
+    "train_sova": {
+      "checked": 200147,
+      "missing": 0,
+      "all_recordings_checked": true
+    },
+    "val_sova_original": {
+      "checked": 1456,
+      "missing": 0,
+      "all_recordings_checked": true
+    },
+    "test_sova_original": {
+      "checked": 1477,
+      "missing": 0,
+      "all_recordings_checked": true
+    }
+  },
+  "audio_audit_limit": "File existence only on the stated records; no full audio decoding or content-hash deduplication.",
+  "outputs": {
+    "train_sova": "/tf/ai_nazarov/proj1/data/train_sova.jsonl",
+    "val_sova_original": "/tf/ai_nazarov/proj1/data/val_sova_original.jsonl",
+    "test_sova_original": "/tf/ai_nazarov/proj1/data/test_sova_original.jsonl",
+    "train_mixed": "/tf/ai_nazarov/proj1/data/train_mixed.jsonl",
+    "val_mixed_original": "/tf/ai_nazarov/proj1/data/val_mixed_original.jsonl"
+  }
+}

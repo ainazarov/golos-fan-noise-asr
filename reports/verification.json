@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-19T10:11:39.007618+00:00",
+  "unit_tests_returncode": 0,
+  "unit_test_log": "reports/unit_tests.txt",
+  "benchmarks": {
+    "clean": "passed",
+    "noise": "passed",
+    "stress": "passed"
+  },
+  "training_guard": {
+    "passed": true,
+    "returncode": 2,
+    "full_training_started": false,
+    "reason": "baseline without --run-training rejected"
+  },
+  "gpu_compute_processes_after_benchmarks": "",
+  "versions": {
+    "nemo_toolkit": "3.0.0",
+    "torch": "2.13.0+cu126",
+    "torchaudio": "2.11.0+cu126",
+    "lightning": "2.4.0",
+    "sentencepiece": "0.2.0"
+  },
+  "full_training_started": false,
+  "unit_tests_passed": 23,
+  "cpu_checkpoint_roundtrip": "passed: OmegaConf, model, optimizer step, scheduler step and global step restored",
+  "python_syntax": "passed"
+}

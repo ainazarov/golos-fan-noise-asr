@@ -1,0 +1,275 @@
+{
+  "status": "complete",
+  "seed": 112,
+  "sources": [
+    {
+      "path": "/share/dataset/train/manifest.jsonl",
+      "sha256": "05f46840da4437a756e161907a50ad57245c1519d24d2feb3741c0747798785a",
+      "recordings": 1103799,
+      "seconds": 4418807.647187,
+      "hours": 1227.446569,
+      "empty_transcripts": 9782,
+      "conditions": {
+        "crowd": {
+          "recordings": 979796,
+          "hours": 1094.987533
+        },
+        "farfield": {
+          "recordings": 124003,
+          "hours": 132.459036
+        }
+      },
+      "duration_bins": {
+        "10-20s": 13035,
+        "2-5s": 805665,
+        "5-10s": 215843,
+        "<=2s": 68808,
+        ">20s": 448
+      }
+    },
+    {
+      "path": "/share/dataset/test/crowd/manifest.jsonl",
+      "sha256": "5a05f03744311bf70393dcd24a4d22c240e4b0aeb909fa3227a2cd430879646e",
+      "recordings": 9994,
+      "seconds": 40321.193875,
+      "hours": 11.200332,
+      "empty_transcripts": 98,
+      "conditions": {
+        "crowd": {
+          "recordings": 9994,
+          "hours": 11.200332
+        }
+      },
+      "duration_bins": {
+        "10-20s": 111,
+        "2-5s": 7227,
+        "5-10s": 2045,
+        "<=2s": 607,
+        ">20s": 4
+      }
+    },
+    {
+      "path": "/share/dataset/test/farfield/manifest.jsonl",
+      "sha256": "2bbc291436dd3781faa92cfa8ab78e390156e0c063226c4b9a66880d864bdd4b",
+      "recordings": 1916,
+      "seconds": 5068.741,
+      "hours": 1.407984,
+      "empty_transcripts": 1,
+      "conditions": {
+        "farfield": {
+          "recordings": 1916,
+          "hours": 1.407984
+        }
+      },
+      "duration_bins": {
+        "10-20s": 2,
+        "2-5s": 1147,
+        "5-10s": 93,
+        "<=2s": 674
+      }
+    }
+  ],
+  "split_policy": {
+    "identity": "recording id; speaker IDs are unavailable",
+    "development": "smallest SHA256(seed, namespace, recording ID), per-condition duration quota",
+    "development_target_hours": 2.0,
+    "development_condition_fractions": {
+      "crowd": 0.9,
+      "farfield": 0.1
+    },
+    "training_min_seconds": 0.3,
+    "training_max_seconds": 20.0,
+    "training_requires_nonempty_text": true,
+    "test_duration_filter": null,
+    "test_empty_transcripts": "retained",
+    "text_normalization": "collapse Unicode whitespace only; preserve case and punctuation",
+    "tokenizer_corpus": "training split transcripts only"
+  },
+  "overlap_recording_counts": {
+    "train_pool_vs_test_crowd": 0,
+    "train_pool_vs_test_farfield": 0,
+    "test_crowd_vs_test_farfield": 0,
+    "train_vs_validation": 0
+  },
+  "excluded_training_pool": {
+    "empty_transcript": 9782,
+    "duration_out_of_range": 577,
+    "both_duration_and_empty": 132,
+    "unique_excluded": 10227
+  },
+  "development_quotas": {
+    "crowd": {
+      "target_seconds": 6480.0,
+      "actual_seconds": 6483.078312,
+      "recordings": 1654
+    },
+    "farfield": {
+      "target_seconds": 720.0,
+      "actual_seconds": 720.863937,
+      "recordings": 177
+    }
+  },
+  "splits": {
+    "train": {
+      "recordings": 1091741,
+      "seconds": 4366353.821312,
+      "hours": 1212.876061,
+      "empty_transcripts": 0,
+      "conditions": {
+        "crowd": {
+          "recordings": 975569,
+          "hours": 1088.154902
+        },
+        "farfield": {
+          "recordings": 116172,
+          "hours": 124.72116
+        }
+      },
+      "duration_bins": {
+        "10-20s": 12829,
+        "2-5s": 797720,
+        "5-10s": 214070,
+        "<=2s": 67122
+      }
+    },
+    "val_original": {
+      "recordings": 1831,
+      "seconds": 7203.94225,
+      "hours": 2.001095,
+      "empty_transcripts": 0,
+      "conditions": {
+        "crowd": {
+          "recordings": 1654,
+          "hours": 1.800855
+        },
+        "farfield": {
+          "recordings": 177,
+          "hours": 0.20024
+        }
+      },
+      "duration_bins": {
+        "10-20s": 20,
+        "2-5s": 1332,
+        "5-10s": 342,
+        "<=2s": 137
+      }
+    },
+    "test_crowd_original": {
+      "recordings": 9994,
+      "seconds": 40321.193875,
+      "hours": 11.200332,
+      "empty_transcripts": 98,
+      "conditions": {
+        "crowd": {
+          "recordings": 9994,
+          "hours": 11.200332
+        }
+      },
+      "duration_bins": {
+        "10-20s": 111,
+        "2-5s": 7227,
+        "5-10s": 2045,
+        "<=2s": 607,
+        ">20s": 4
+      }
+    },
+    "test_farfield_original": {
+      "recordings": 1916,
+      "seconds": 5068.741,
+      "hours": 1.407984,
+      "empty_transcripts": 1,
+      "conditions": {
+        "farfield": {
+          "recordings": 1916,
+          "hours": 1.407984
+        }
+      },
+      "duration_bins": {
+        "10-20s": 2,
+        "2-5s": 1147,
+        "5-10s": 93,
+        "<=2s": 674
+      }
+    },
+    "benchmark_train": {
+      "recordings": 4096,
+      "seconds": 16437.960937,
+      "hours": 4.5661,
+      "empty_transcripts": 0,
+      "conditions": {
+        "crowd": {
+          "recordings": 3659,
+          "hours": 4.094611
+        },
+        "farfield": {
+          "recordings": 437,
+          "hours": 0.471489
+        }
+      },
+      "duration_bins": {
+        "10-20s": 48,
+        "2-5s": 2993,
+        "5-10s": 803,
+        "<=2s": 252
+      }
+    },
+    "benchmark_val": {
+      "recordings": 128,
+      "seconds": 483.945437,
+      "hours": 0.134429,
+      "empty_transcripts": 0,
+      "conditions": {
+        "crowd": {
+          "recordings": 115,
+          "hours": 0.120218
+        },
+        "farfield": {
+          "recordings": 13,
+          "hours": 0.014212
+        }
+      },
+      "duration_bins": {
+        "10-20s": 1,
+        "2-5s": 93,
+        "5-10s": 24,
+        "<=2s": 10
+      }
+    }
+  },
+  "audio_path_checks": {
+    "train": {
+      "checked": 128,
+      "missing": 0
+    },
+    "val_original": {
+      "checked": 128,
+      "missing": 0
+    },
+    "test_crowd_original": {
+      "checked": 128,
+      "missing": 0
+    },
+    "test_farfield_original": {
+      "checked": 128,
+      "missing": 0
+    },
+    "benchmark_train": {
+      "checked": 4096,
+      "missing": 0
+    },
+    "benchmark_val": {
+      "checked": 128,
+      "missing": 0
+    }
+  },
+  "audio_audit_limit": "Existence checks only on the stated samples; no full-corpus audio decoding or content-hash audit.",
+  "outputs": {
+    "train": "/tf/ai_nazarov/proj1/data/train.jsonl",
+    "val_original": "/tf/ai_nazarov/proj1/data/val_original.jsonl",
+    "test_crowd_original": "/tf/ai_nazarov/proj1/data/test_crowd_original.jsonl",
+    "test_farfield_original": "/tf/ai_nazarov/proj1/data/test_farfield_original.jsonl",
+    "benchmark_train": "/tf/ai_nazarov/proj1/data/benchmark_train.jsonl",
+    "benchmark_val": "/tf/ai_nazarov/proj1/data/benchmark_val.jsonl",
+    "training_text": "/tf/ai_nazarov/proj1/data/train_text.txt"
+  }
+}

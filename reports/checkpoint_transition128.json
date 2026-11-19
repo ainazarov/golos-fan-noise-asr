@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "started_utc": "2026-11-19T12:35:24.445110+00:00",
+  "full_training_started": false,
+  "stages": {
+    "baseline": {
+      "status": "passed",
+      "global_step": 1,
+      "validation_wer": 1.0,
+      "checkpoint": "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/baseline_20261119T123534Z/checkpoints/epoch=00-step=1.ckpt",
+      "checkpoint_sha256": "1f7ead02f2d75552bab297ff0a4d0079f4a7a5ec319ef95e7ba9b58247fc05da",
+      "checkpoint_bytes": 1366404844,
+      "fresh_optimizer_step": 1,
+      "init_checkpoint": null,
+      "init_checkpoint_sha256": null,
+      "mel_bins": 128
+    },
+    "mixed": {
+      "status": "passed",
+      "global_step": 1,
+      "validation_wer": 1.0087718963623047,
+      "checkpoint": "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/mixed_20261119T123616Z/checkpoints/epoch=00-step=1.ckpt",
+      "checkpoint_sha256": "9fc9cfc6528e420960c25ccddcd5067cef59195becc5b5322582d0ec450da3b9",
+      "checkpoint_bytes": 1366404780,
+      "fresh_optimizer_step": 1,
+      "init_checkpoint": "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/baseline_20261119T123534Z/checkpoints/epoch=00-step=1.ckpt",
+      "init_checkpoint_sha256": "1f7ead02f2d75552bab297ff0a4d0079f4a7a5ec319ef95e7ba9b58247fc05da",
+      "mel_bins": 128
+    },
+    "noise": {
+      "status": "passed",
+      "global_step": 1,
+      "validation_wer": 2.059999942779541,
+      "checkpoint": "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/noise_20261119T123703Z/checkpoints/epoch=00-step=1.ckpt",
+      "checkpoint_sha256": "ea8543d0b506f3a9138c8ce9601fe76feffd13e13e3f82a61d5051674c9977d3",
+      "checkpoint_bytes": 1366405868,
+      "fresh_optimizer_step": 1,
+      "init_checkpoint": "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/mixed_20261119T123616Z/checkpoints/epoch=00-step=1.ckpt",
+      "init_checkpoint_sha256": "9fc9cfc6528e420960c25ccddcd5067cef59195becc5b5322582d0ec450da3b9",
+      "mel_bins": 128
+    }
+  },
+  "phase": null,
+  "tokenizer_sha256": "b66240e2d5625065b281f7bc210df6d5cbe68a28b9e0611c5542c3d2167192d5",
+  "vocab_size": 112,
+  "mel_bins": 128,
+  "protected_files_unchanged": true,
+  "finished_utc": "2026-11-19T12:37:44.958294+00:00",
+  "temporary_checkpoints_removed": [
+    "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/noise_20261119T123703Z/checkpoints/epoch=00-step=1.ckpt",
+    "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/noise_20261119T123703Z/checkpoints/last.ckpt",
+    "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/baseline_20261119T123534Z/checkpoints/epoch=00-step=1.ckpt",
+    "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/baseline_20261119T123534Z/checkpoints/last.ckpt",
+    "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/mixed_20261119T123616Z/checkpoints/epoch=00-step=1.ckpt",
+    "/tf/ai_nazarov/proj1/assets/checkpoint_transition128/runs/mixed_20261119T123616Z/checkpoints/last.ckpt"
+  ]
+}

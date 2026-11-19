@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-19T10:42:14.971712+00:00",
+  "status": "passed",
+  "unit_tests_passed": 35,
+  "checkpoint_bytes": 1356887722,
+  "checkpoint_gib": 1.2637001667171717,
+  "checkpoint_save_seconds": 4.668957468937151,
+  "baseline_50_epochs_plus_last_gib": 64.44870850257576,
+  "full_50_plus_5_plus_5_with_three_last_gib": 79.61311050318182,
+  "evaluation_records": 128,
+  "evaluation_seconds": 1.3231933659408242,
+  "model_load_seconds": 13.270768705988303,
+  "checkpoint_restore_and_transcription": "passed",
+  "probe_checkpoint_retained": false,
+  "note": "One-step scratch model: verifies checkpoint I/O and evaluation; decoding speed and WER do not represent a converged model."
+}

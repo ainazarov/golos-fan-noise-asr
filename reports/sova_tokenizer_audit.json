@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-19T12:29:48.255127+00:00",
+  "vocab_size": 112,
+  "tokenizer_sha256": "b66240e2d5625065b281f7bc210df6d5cbe68a28b9e0611c5542c3d2167192d5",
+  "normalization": "Sova whitespace collapse and \u0451 to \u0435; existing Golos unchanged",
+  "splits": {
+    "train_sova": {
+      "records": 200147,
+      "tokens": 7674262,
+      "unknown_tokens": 0,
+      "unknown_records": 0
+    },
+    "val_sova_original": {
+      "records": 1456,
+      "tokens": 56850,
+      "unknown_tokens": 0,
+      "unknown_records": 0
+    },
+    "test_sova_original": {
+      "records": 1477,
+      "tokens": 56529,
+      "unknown_tokens": 0,
+      "unknown_records": 0
+    }
+  },
+  "status": "passed"
+}
